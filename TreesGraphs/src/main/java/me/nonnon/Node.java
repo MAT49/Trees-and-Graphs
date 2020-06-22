@@ -3,7 +3,7 @@ package me.nonnon;
 class Node {
 
 	String name;
-	Enum state;
+	Enum<?> state;
 	Node[] children;
 	
 	public Node(String n, int childrenSize) {
