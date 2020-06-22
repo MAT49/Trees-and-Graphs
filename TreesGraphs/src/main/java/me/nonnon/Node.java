@@ -1,14 +1,8 @@
 package me.nonnon;
 
-class Node<T> {
+class Node {
 
-	Node<T> next;
-	T data;	
-	
-	Node(){	}
-	
-	Node(T d) {			
-		this.data = d;
-	}
+	String name;
+	Node[] children;
 	
 }

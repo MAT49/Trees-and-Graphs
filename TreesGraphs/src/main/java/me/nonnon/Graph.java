@@ -1,6 +1,6 @@
 package me.nonnon;
 
-public class Graph<T> {
-	Node<T>[] nodes;
+public class Graph {
+	Node[] nodes;
 
 }
