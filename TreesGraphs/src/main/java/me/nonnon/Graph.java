@@ -1,6 +1,14 @@
 package me.nonnon;
 
-public class Graph {
+class Graph {
 	Node[] nodes;
+	
+	public void getNodes() {
+		
+	}
+	
+	public void getAdjacent() {
+		
+	}
 
 }
