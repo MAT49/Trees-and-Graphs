@@ -4,6 +4,8 @@ import java.util.LinkedList;
 
 public class Q4_1 {
 	// Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
+	
+	
 	enum State { Unvisited, Visited, Visiting; }
 	
 	boolean search(Graph g, Node start, Node end) {
@@ -12,7 +14,8 @@ public class Q4_1 {
 		// operates as Queue
 		LinkedList<Node> q = new LinkedList<Node>();
 		
-		for (Node u : g.getNodes()) {
+		// set initial flag as Unvisited for all nodes
+		for (Node u : g.nodes) {
 			u.state = State.Unvisited;
 		}
 		start.state = State.Visiting;
@@ -21,7 +24,7 @@ public class Q4_1 {
 		while (!q.isEmpty()) {
 			u = q.removeFirst();
 			if (u != null) {
-				for (Node v : u.getAdjacent()) {
+				for (Node v : u.children) {
 					if (v.state == State.Unvisited) {
 						if (v == end) {
 							return true;
